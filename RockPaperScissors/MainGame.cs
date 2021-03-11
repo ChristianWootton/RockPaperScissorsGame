@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace RockPaperScissors{
-    //This code was provided by the owner of the tutorial. 
+namespace RockPaperScissors
+{
+  //This code was provided by the owner of the tutorial. 
     //There is alot of repeat code, the score does not seem to work and 
     //neither does asking if the player would like to play again.
     //My goal is to take this tutorial, and apply Robert C. Martins "Clean Code" to it. 
-    class Program{
+    class MainGame{
         static void Main(string[] args){
             Console.WriteLine("Please choose a move: 1:Rock, 2:Paper or, 3:Scissors");
             PlayerInput player = new PlayerInput();
