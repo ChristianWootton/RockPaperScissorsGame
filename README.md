@@ -14,3 +14,11 @@ Program
 
 Switch statement is repeated twice. Next goal to implement a "Switch" class? 
 Both Input classes can derive their move from that. 
+
+Update 3: 
+Put switch statement in separate class with a constructor that takes an int, the switch then uses this int
+to derive which move is being made. Both input classes use this to get the move made. 
+The MainGame class uses this information to determine the outcome. 
+Using the first few chapters of Clean Code as a guide on naming conventions, method/class structures and 
+opinions on switch statements, I believe I have managed to successfully clean up the code and make it simple to understand
+while maintaining complexity and the producing a product with the overall goal of playing RPS. 

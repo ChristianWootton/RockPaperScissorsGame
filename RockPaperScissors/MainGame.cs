@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RockPaperScissors{
-  //This code was provided by the owner of the tutorial. 
-    //There is alot of repeat code, the score does not seem to work and 
-    //neither does asking if the player would like to play again.
-    //My goal is to take this tutorial, and apply Robert C. Martins "Clean Code" to it. 
+namespace RockPaperScissors{ 
     class MainGame{
         static void Main(string[] args){
             Console.WriteLine("Please choose a move: 1:Rock, 2:Paper or, 3:Scissors");
@@ -20,18 +16,22 @@ namespace RockPaperScissors{
             Console.WriteLine("You chose: {0}", player.movePerformed);   
 
             //If Else statment rather long, but doubt it can be shortened due to its nature. 
-            //Best case scenario was to define draw/win scenario then anything else is a loss scenario. 
+            //Best case scenario was to define draw/win scenario, then anything else is a loss scenario. 
             if(enemy.movePerformed == player.movePerformed){
                 Console.WriteLine("Result is a draw");
             }
-            else if ((enemy.movePerformed == "Rock" && player.movePerformed == "Paper") || (enemy.movePerformed == "Paper" && player.movePerformed == "Scissors")|| (enemy.movePerformed == "Scissors" && player.movePerformed == "Rock")){
+            else if ((enemy.movePerformed == "Rock" && player.movePerformed == "Paper") || (enemy.movePerformed == "Paper" && player.movePerformed == "Scissors") || (enemy.movePerformed == "Scissors" && player.movePerformed == "Rock")){
                 Console.WriteLine("You have WON!");
             }
             else 
                 Console.WriteLine("You have LOST!");
 
-            //CODE PROVIDED
-            
+            //CODE PROVIDED            
+            //This code was provided by the owner of the tutorial. 
+            //There is alot of repeat code, the score does not seem to work and 
+            //neither does asking if the player would like to play again.
+            //My goal is to take this tutorial, and apply Robert C. Martins "Clean Code" to it.
+
             /*string inputPlayer, inputCPU;
             int randomInt;
             
