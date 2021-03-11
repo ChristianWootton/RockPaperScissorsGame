@@ -7,22 +7,13 @@ namespace RockPaperScissors{
     //Switch statements should be hidden away, and never repeated.  
     public class EnemyInput{
         public string movePerformed;
-        public void EnemyMove(){
+        public void EnemyDecision(){
             int randomMove;
             Random randomNumberMove = new Random();
             randomMove = randomNumberMove.Next(1,4);
-
-            switch (randomMove){
-                case 1: 
-                    movePerformed = "Rock";
-                    break;
-                case 2: 
-                    movePerformed = "Paper";
-                    break;
-                case 3: 
-                    movePerformed = "Scissors";
-                    break;
-            }            
+            MoveChoice choice = new MoveChoice(randomMove);
+            choice.moveChosen = randomMove;
+            movePerformed = choice.movePerformed;
         }
     }
 }

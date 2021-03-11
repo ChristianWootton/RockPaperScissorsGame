@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace RockPaperScissors
-{
+namespace RockPaperScissors{
   //This code was provided by the owner of the tutorial. 
     //There is alot of repeat code, the score does not seem to work and 
     //neither does asking if the player would like to play again.
@@ -11,12 +10,15 @@ namespace RockPaperScissors
     class MainGame{
         static void Main(string[] args){
             Console.WriteLine("Please choose a move: 1:Rock, 2:Paper or, 3:Scissors");
+
             PlayerInput player = new PlayerInput();
             EnemyInput enemy = new EnemyInput();
-            enemy.EnemyMove();
-            player.PlayerMove();
-            Console.WriteLine("The enemy has chose: {0}", enemy.movePerformed);
+            enemy.EnemyDecision();
+            player.PlayerDecision();
+
+            Console.WriteLine("The enemy chose: {0}", enemy.movePerformed);
             Console.WriteLine("You chose: {0}", player.movePerformed);   
+
             //If Else statment rather long, but doubt it can be shortened due to its nature. 
             //Best case scenario was to define draw/win scenario then anything else is a loss scenario. 
             if(enemy.movePerformed == player.movePerformed){
